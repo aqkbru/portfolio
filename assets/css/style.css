@@ -1,0 +1,336 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: poppins, sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+body{
+    overflow-x: hidden;
+}
+.hero-header{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #23162b;
+}
+.wrapper{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header{
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo i{
+    height: 45px;
+    width: 45px;
+    background-color: #007ced;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+.logo .logo-text{
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+nav .togglebtn{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+nav .togglebtn span{
+    display: block;
+    background-color: #007ced;
+    margin: 5px 0px;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+nav .navlinks{
+    list-style-type: none;
+}
+nav .navlinks li{
+    display: inline-block;
+    font-weight: 600;
+}
+nav .navlinks li a{
+    color: #e5e5e5;
+    margin-right: 2.5rem;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 7rem;
+}
+.container .hero-pic{
+    width: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #23162b;
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+}
+.hero-pic img{
+    height: 100%;
+    width: 100%;
+    transition: 0.4s;
+}
+.hero-pic img:hover{
+    transform: scale(1.2);
+}
+.hero-text{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.hero-text h5{
+    color: #e5e5e5;
+    font-size: 14px;
+}
+.hero-text h5 span{
+    color: #007ced;
+    font-size: 16px;
+}
+
+.hero-text h1{
+    color: #007ced;
+    font-size: 3rem;
+    margin-top: 10px;
+}
+.hero-text p{
+    color: #e5e5e5;
+    margin: 10px 10px 0px 0;
+    font-weight: bold;
+}
+.btn-group{
+    margin: 45px 0;
+}
+.btn-group .btn{
+    color: #fff;
+    background-color: #4a3459;
+    padding: 12px 25px;
+    margin-right: 7px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+    font-weight: 800;
+}
+.btn-group .btn:hover{
+    background-color: #5d476b;
+    transition: 0.3s;    
+}
+
+.hero-text .social a{
+    color: #555;
+    font-size: 20px;
+    margin: 0 10px;
+    font-size: 2rem;
+}
+.hero-text .social a:hover{
+    color: #896e9a;
+    margin: 0 10px;
+}
+.hero-port h2{
+    text-align: center;
+    margin-top: 80px;
+    color: #007ced;
+}
+.section {
+    text-align: center;
+    margin-top: 5rem;
+    padding: 35px;
+    border-radius: 50px;
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.5);
+}
+.portfolio h2,
+.skills h2,
+.contacts h2{
+    font-size: 2.5rem;
+    color: #e5e5e5;
+    margin-bottom: 2.5rem;
+}
+.portfolio-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.portfolio p{
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    color: #e5e5e5;
+}
+.portfolio img{
+    width: 22%;
+    cursor: pointer;
+}
+.portfolio img:hover{
+    opacity: 1;
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+.portfolio img:not(hover){
+    opacity: 0.6;
+    transform: scale(1);
+    transition: 0.5s;
+}
+.skills h2{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #e5e5e5;
+    margin-bottom: 2.5rem;
+}
+.skills .skills-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.skills .skills-img img{
+    width: 40%;
+}
+.skills-container h3{
+    color: #5d476b;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+.skills-name{
+    background-color: #4a3459;
+    padding: 30px;
+    color: #e5e5e5;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+.skills-sx,
+.skills-dx{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.skills-sx span,
+.skills-dx span{
+    font-size: 20px;
+    margin: 10px 0;
+    box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+.skills-sx span:hover,
+.skills-dx span:hover{
+    transform: scale(1.05);
+    box-shadow: 3px 6px 2px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+.contacts-area{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+.contacts-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.contacts-box h3{
+    color: #007ced;
+    padding: 20px 0;
+    font-weight: 800;
+}
+.contacts-box p{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+.contacts .write-me{
+    text-align: left;
+}
+.contacts .write-me input{
+    padding: 5px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    box-shadow: 3px 6px 2px rgba(0, 0, 0, 0.5);
+}
+.contacts .write-me textarea{
+    margin-top: 20px;
+    padding: 5px;
+    box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.contacts button{
+    background-color: #4a3459;
+    border: 0;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 20px;
+    padding: 10px;
+    box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 20%;
+}
+.contacts button:hover{
+    background-color: #896e9a;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.footer{
+    margin-top: 60px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background: rgb(35,22,43);
+    background: linear-gradient(180deg, rgba(35,22,43,1) 0%, rgba(33,18,70,1) 100%);
+}
+.footer .hi,
+.footer .explore,
+.footer.follow{
+    width: 33%;
+}
+.footer h2{
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+.footer p{
+    color: #555;
+    padding: 10px 0px;
+}
+.footer ul li{
+    padding-top: 10px;  
+    padding-right: 5px;
+}
+.footer .explore a{
+    color: #555;
+}
+.footer .follow ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer .follow a{
+    font-size: 1.2rem;
+    color: #555;
+}
+.footer .follow a:hover{
+    color: #896e9a;
+}
