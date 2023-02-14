@@ -227,7 +227,7 @@ nav .navlinks li a{
 .skills-dx{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
 }
 .skills-sx span,
 .skills-dx span{
