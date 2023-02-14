@@ -9,7 +9,7 @@
 }
 a:visited{ 
     text-decoration: none; 
-    color: #fff; 
+    color: teal; 
 }
 body{
     overflow-x: hidden;
@@ -158,11 +158,6 @@ nav .navlinks li a{
     color: #896e9a;
     margin: 0 10px;
 }
-.hero-port h2{
-    text-align: center;
-    margin-top: 80px;
-    color: #007ced;
-}
 .section {
     text-align: center;
     margin-top: 5rem;
@@ -199,12 +194,6 @@ nav .navlinks li a{
     opacity: 0.6;
     transform: scale(1);
     transition: 0.5s;
-}
-.skills h2{
-    text-align: center;
-    font-size: 2.5rem;
-    color: #e5e5e5;
-    margin-bottom: 2.5rem;
 }
 .skills .skills-container{
     display: flex;
