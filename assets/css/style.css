@@ -371,12 +371,11 @@ nav .navlinks li a{
         font-size: 10px;
         font-weight: 300;
     }
-    .contacts .write-me input {
-        padding: 5px 3px 5px 0;
+    .contacts-box{
+        align-items: stretch;
     }
-    .write-me button{
-        position: relative;
-        left: 65px;
+    .write-me{
+        display: none;
     }
     .footer h2{
         font-size: 1rem !important;
@@ -385,11 +384,6 @@ nav .navlinks li a{
     .footer li{
         font-size: 15px;
     }
-    .contacts-box{
-        align-items: stretch;
-    }
-    .write-me{
-        display: none;
-    }
+    
 
   }
