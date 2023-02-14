@@ -294,17 +294,17 @@ nav .navlinks li a{
     cursor: pointer;
 }
 .footer{
+    text-align: center;
     margin-top: 60px;
     padding: 30px;
     display: flex;
     justify-content: space-evenly;
-    align-items: flex-start;
     background: rgb(35,22,43);
     background: linear-gradient(180deg, rgba(35,22,43,1) 0%, rgba(33,18,70,1) 100%);
 }
 .footer .hi,
 .footer .explore,
-.footer.follow{
+.footer .follow{
     width: 33%;
 }
 .footer h2{
@@ -325,7 +325,7 @@ nav .navlinks li a{
 }
 .footer .follow ul{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .footer .follow a{
     font-size: 1.2rem;
@@ -349,11 +349,10 @@ nav .navlinks li a{
     .hero-pic{
         position: absolute;
         top: 25px;
-        width: 25% !important;
+        width: 20% !important;
     }
     .hero-text{
-        position: relative;
-        top: -30px;
+        margin-top: 20px;
     }
     h2{
         font-size: 1.5rem !important;
@@ -382,6 +381,11 @@ nav .navlinks li a{
     .write-me{
         display: none;
     }
+    .footer .hi,
+    .footer .explore,
+    .footer .follow{
+        text-align: center;
+    }
     .footer h2{
         font-size: 1rem !important;
     }
@@ -389,6 +393,7 @@ nav .navlinks li a{
     .footer li{
         font-size: 15px;
     }
+    
     
 
   }
