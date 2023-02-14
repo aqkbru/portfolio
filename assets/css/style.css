@@ -334,3 +334,55 @@ nav .navlinks li a{
 .footer .follow a:hover{
     color: #896e9a;
 }
+
+/* MEDIA SCREEN */
+
+@media screen and (max-width: 780px) {
+    .logo-text,
+    nav{
+        display: none;
+    }
+    .container{
+        text-align: center;
+    }
+    .hero-pic{
+        position: absolute;
+        top: 19px;
+        width: 25%;
+    }
+    h2{
+        font-size: 1.5rem !important;
+    }
+    .portfolio p{
+        font-size: 1rem !important;
+    }
+    h3{
+        font-size: 1.1rem !important;
+    }
+    .skills-name{
+        font-size: 15px !important;
+        margin: 4px;
+        padding: 14px;
+    }
+    .contacts-area h3{
+        font-weight: 300;
+    }
+    .contacts-area p{
+        font-size: 10px;
+        font-weight: 300;
+    }
+    .contacts .write-me input {
+        padding: 5px 3px 5px 0;
+    }
+    .write-me button{
+        position: relative;
+        left: 65px;
+    }
+    .footer h2{
+        font-size: 1rem !important;
+    }
+    .footer p,
+    .footer li{
+        font-size: 15px;
+    }
+  }
