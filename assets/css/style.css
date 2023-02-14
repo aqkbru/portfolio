@@ -7,6 +7,10 @@
     scroll-behavior: smooth;
     list-style: none;
 }
+a:visited{ 
+    text-decoration: none; 
+    color: #fff; 
+}
 body{
     overflow-x: hidden;
 }
