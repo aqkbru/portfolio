@@ -347,8 +347,12 @@ nav .navlinks li a{
     }
     .hero-pic{
         position: absolute;
-        top: 19px;
+        top: 25px;
         width: 25% !important;
+    }
+    .hero-text{
+        position: relative;
+        top: -30px;
     }
     h2{
         font-size: 1.5rem !important;
@@ -364,12 +368,12 @@ nav .navlinks li a{
         margin: 4px;
         padding: 14px;
     }
-    .contacts-area h3{
-        font-weight: 300;
+    .skills-subtitle h3,
+    .skills-subtitle i{
+        font-size: 0.7rem !important;
     }
     .contacts-area p{
-        font-size: 10px;
-        font-weight: 300;
+
     }
     .contacts-box{
         align-items: stretch;
