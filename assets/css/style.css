@@ -267,8 +267,9 @@ nav .navlinks li a{
 }
 .contacts .write-me input{
     padding: 5px;
-    border: 3px solid #000;
-    border-radius: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #4a3459;
     box-shadow: 3px 6px 2px rgba(0, 0, 0, 0.5);
 }
 .contacts .write-me textarea{
@@ -276,6 +277,8 @@ nav .navlinks li a{
     padding: 5px;
     box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    background: #4a3459;
+    border: none;
 }
 .contacts button{
     background-color: #4a3459;
@@ -362,6 +365,9 @@ nav .navlinks li a{
     }
     h3{
         font-size: 1.1rem !important;
+    }
+    .skills-dx{
+        align-items: flex-end;
     }
     .skills-name{
         font-size: 15px !important;
