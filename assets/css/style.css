@@ -339,6 +339,7 @@ nav .navlinks li a{
 
 @media screen and (max-width: 780px) {
     .logo-text,
+    .logo i,
     nav{
         display: none;
     }
