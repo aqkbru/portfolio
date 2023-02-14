@@ -385,4 +385,11 @@ nav .navlinks li a{
     .footer li{
         font-size: 15px;
     }
+    .contacts-box{
+        align-items: stretch;
+    }
+    .write-me{
+        display: none;
+    }
+
   }
