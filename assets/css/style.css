@@ -348,7 +348,7 @@ nav .navlinks li a{
     .hero-pic{
         position: absolute;
         top: 19px;
-        width: 25%;
+        width: 25% !important;
     }
     h2{
         font-size: 1.5rem !important;
