@@ -80,17 +80,20 @@ nav .navlinks li a{
 }
 .dropdown{
     display: none;
+    width: max-content;
 }
 .dropbtn {
-    background-color: #555;
+    background: none;
     color: white;
     padding: 10px;
-    font-size: 13px;
-    border: none;
+    font-size: 7px;
     cursor: pointer;
-    border-radius: 10px;
     font-weight: 600;
-    padding: 10px 13px;
+    border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	border: 2px solid #e5e5e5;
+
   }
   
 .dropdown-content {
