@@ -407,14 +407,14 @@ nav .navlinks li a{
     .hero-pic{
         position: absolute;
         top: 25px;
-        width: 23% !important;
+        width: 30% !important;
     }
   }
 
-  @media screen and (max-width: 530px) {
+  /* @media screen and (max-width: 530px) {
     .hero-pic{
         position: absolute;
         top: 25px;
         width: 27% !important;
-    }
+    } */
   }
