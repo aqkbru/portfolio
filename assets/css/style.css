@@ -23,11 +23,16 @@ body{
     padding: 0 20px;
 }
 header{
-    padding: 40px 0 30px;
+    padding: 20px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background-color: #23162b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
 }
 .logo{
     display: inline-flex;
@@ -135,7 +140,7 @@ nav .navlinks li a{
     background-color: #4a3459;
     padding: 12px 25px;
     margin-right: 7px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
     font-weight: 800;
 }
@@ -178,7 +183,7 @@ nav .navlinks li a{
     color: #e5e5e5;
 }
 .portfolio img{
-    width: 40%;
+    width: 30%;
     cursor: pointer;
 }
 .portfolio img:hover{
@@ -330,10 +335,11 @@ nav .navlinks li a{
 /* MEDIA SCREEN */
 
 @media screen and (max-width: 780px) {
-    .logo-text,
-    .logo i,
-    nav{
+    header{
         display: none;
+    }
+    h1{
+        font-size: 2rem !important;
     }
     .container{
         text-align: center;
@@ -341,10 +347,20 @@ nav .navlinks li a{
     .hero-pic{
         position: absolute;
         top: 25px;
-        width: 20% !important;
+        width: 18% !important;
     }
     .hero-text{
-        margin-top: 20px;
+        margin-top: 65px;
+    }
+    .btn-group .btn{
+        font-weight: 600;
+        padding: 11px 15px;
+    }
+    .social a{
+        font-size: 1.5rem !important;
+    }
+    .section{
+        margin-top: 2rem;
     }
     h2{
         font-size: 1.5rem !important;
@@ -385,7 +401,12 @@ nav .navlinks li a{
     .footer li{
         font-size: 15px;
     }
-    
-    
+  }
 
+  @media screen and (max-width: 630px) {
+    .hero-pic{
+        position: absolute;
+        top: 25px;
+        width: 23% !important;
+    }
   }
