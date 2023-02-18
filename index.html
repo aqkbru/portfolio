@@ -13,7 +13,16 @@
     <title>Adriano Russo Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/img/favicon-32x32.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> 
+    <!-- SCRIPT -->
+    <script src="assets/js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("oI0hL79lsbaGORo46");
+            })();
+    </script>
 </head>
 <body>
     <div class="hero-header">
@@ -40,7 +49,7 @@
             <!-- HOME -->
             <div class="container">
                 <div class="hero-pic">
-                    <img src="assets/img/5025.jpg" alt="img">
+                    <img src="assets/img/5025.jpg" alt="immagine profilo">
                 </div>
                
                 <div class="hero-text">
@@ -67,8 +76,8 @@
                 <h2>Portfolio</h2>
                 <p>Ho riprodotto la Home di Facebook e Instagram in html, css e js. Ecco a voi!</p>
                 <div class="portfolio-container">
-                        <a href="https://aqkbru.github.io/facebook-home-by-me/"><img src="assets/img/facebook.png" alt="img"></a>
-                        <a href="https://aqkbru.github.io/instagram-home-by-me/"><img src="assets/img/instagram.png" alt="img"></a>
+                        <a href="https://aqkbru.github.io/facebook-home-by-me/"><img src="assets/img/facebook.png" alt="immagine progetto facebook"></a>
+                        <a href="https://aqkbru.github.io/instagram-home-by-me/"><img src="assets/img/instagram.png" alt="immagine progetto instagram"></a>
                 </div>
             </div>
             <!-- SKILLS -->
@@ -92,24 +101,32 @@
             </div>
             <!-- CONTACTS -->
             <div class="contacts section" id="contacts">
-                <h2>Contattami</h2>
+                <h2>Contatti</h2>
                 <div class="contacts-area">
                     <div class="contacts-box">
                     <h3>Email</h3>
                     <p>russoadriano92@gmail.com</p>
-                    <h3>Telefono</h3>
-                    <p>+39 3488137185</p>
                     <h3>GitHub</h3>
                     <p><a href="https://github.com/aqkbru">https://github.com/aqkbru</a></p>
                 </div>
-                <div class="write-me">
-                    <input type="text" placeholder="Nome">
-                    <input type="text" placeholder="Cognome">
-                    <div class="textarea">
-                        <textarea name="" id="" cols="49" rows="10"></textarea>                     
+                    <div class="write-me">
+                        <input
+                            type="text"
+                            id="nome"
+                            placeholder="Inserisci il tuo nome"
+                            required
+                        />
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Inserisci la tua email"
+                            required
+                        />
+                        <div class="textarea">
+                            <textarea id="testo" placeholder="Scrivi qui il tuo messaggio" cols="49" rows="10" required></textarea>                     
+                        </div>
+                        <button onclick="SendMail()">Invia</button>
                     </div>
-                    <button>Invia</button>
-                </div>
         </div> 
         
                 </div>
