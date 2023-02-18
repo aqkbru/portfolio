@@ -7,10 +7,6 @@
     scroll-behavior: smooth;
     list-style: none;
 }
-a:visited{ 
-    text-decoration: none; 
-    color: teal; 
-}
 body{
     overflow-x: hidden;
 }
@@ -182,7 +178,7 @@ nav .navlinks li a{
     color: #e5e5e5;
 }
 .portfolio img{
-    width: 22%;
+    width: 40%;
     cursor: pointer;
 }
 .portfolio img:hover{
