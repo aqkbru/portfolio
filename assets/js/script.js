@@ -19,7 +19,6 @@ function SendMail() {
   
   }
 
-
 //   function SendMail() {
 //     var params = {
 //       from_name: document.getElementById("nome").value,
