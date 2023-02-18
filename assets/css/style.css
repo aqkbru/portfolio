@@ -85,16 +85,13 @@ nav .navlinks li a{
     background-color: #555;
     color: white;
     padding: 10px;
-    font-size: 16px;
+    font-size: 13px;
     border: none;
     cursor: pointer;
     border-radius: 10px;
+    font-weight: 600;
+    padding: 10px 13px;
   }
-  
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
   
 .dropdown-content {
     display: none;
@@ -391,8 +388,8 @@ nav .navlinks li a{
     .dropdown{
         display: block;
         position: relative;
-        top: 65px;
-        left: 25px;
+        top: 30px;
+        left: 5px;
     }
     .btn-group .btn{
         font-weight: 600;
