@@ -42,12 +42,17 @@
                 </nav>
             </header>
             <div class="dropdown">
-                <button class="dropbtn" onclick="togglemenu()">Menù</button>
+                <!-- <button class="dropbtn" onclick="togglemenu()">Menù</button> -->
+                <div class="hamburger" onclick="togglemenu()">
+                    <span class="bar1"></span>
+                    <span class="bar2"></span>
+                    <span class="bar3"></span>
+                </div>
                 <div class="dropdown-content" id="menu">
-                    <li><a href="#" onclick="togglemenu()">Home</a></li>
-                    <li><a href="#portfolio" onclick="togglemenu()">Portfolio</a></li>
-                    <li><a href="#skills" onclick="togglemenu()">Skills</a></li>
-                    <li><a href="#contacts" onclick="togglemenu()">Contatti</a></li>
+                    <li><i class="fa-solid fa-house"></i><a href="#" onclick="togglemenu()">Home</a></li>
+                    <li><i class="fa-solid fa-pen"></i><a href="#portfolio" onclick="togglemenu()">Portfolio</a></li>
+                    <li><i class="fa-solid fa-hand-sparkles"></i><a href="#skills" onclick="togglemenu()">Skills</a></li>
+                    <li><i class="fa-solid fa-phone"></i><a href="#contacts" onclick="togglemenu()">Contatti</a></li>
                 </div>
               </div>
             <!-- HOME -->

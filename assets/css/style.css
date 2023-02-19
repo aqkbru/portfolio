@@ -83,30 +83,50 @@ nav .navlinks li a{
     display: none;
     width: max-content;
 }
-.dropbtn {
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+}
+.bar1,
+.bar2,
+.bar3 {
+  margin: 2px 0;
+  width: 28px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: #555;
+}
+/* .dropbtn {
     background: #838383;
     color: white;
     padding: 10px;
     font-size: 7px;
     cursor: pointer;
-    font-weight: 500;
-	border: 1px solid #e5e5e5;
+    font-weight: 800;
+    border-radius: 8px;
+	border: none;
     margin-bottom: 10px;
-  }
+  } */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #a2a2a2;
-    min-width: 100px;
+    background-color: #555;
+    min-width: 95px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    border-radius: 10px;
-    opacity: 85%;
+    border-radius: 6px;
+    opacity: 95%;
+}
+.dropdown-content li{
+    padding: 10px 5px;
+    display: flex;
+    align-items: baseline;
 }
 .dropdown-content a {
-    font-size: 12px;
+    font-size: 14px;
     color: #fff;
-    padding: 12px 10px;
+    padding: 8px 0px 8px 3px;
     text-decoration: none;
     display: block;
 }
@@ -114,22 +134,24 @@ nav .navlinks li a{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 7rem;
+    padding-top: 11rem;
 }
 .container .hero-pic{
-    width: 400px;
+    width: 380px;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid #f1f1f1;
+    /* border: 5px solid #f1f1f1; */
     box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
 }
 .hero-pic img{
-    height: 100%;
+    max-width: 100%;
     width: 100%;
+    height: auto;
     transition: 0.4s;
+    transform: scale(1.08);
 }
 .hero-pic img:hover{
-    transform: scale(1.2);
+    transform: scale(1.23);
 }
 .hero-text{
     max-width: 500px;
@@ -160,12 +182,12 @@ nav .navlinks li a{
 }
 .btn-group .btn{
     color: #fff;
-    background-color: #838383;
+    background-color: #444;
     padding: 12px 25px;
     margin-right: 7px;
-    border-radius: 10px;
-    box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
-    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 600;
 }
 .btn-group .btn:hover{
     background-color: #707070;   
@@ -192,7 +214,7 @@ nav .navlinks li a{
 .skills h2,
 .contacts h2{
     font-size: 2.5rem;
-    color: #707070;
+    color: #444;
     margin-bottom: 2.5rem;
 }
 .portfolio-container{
@@ -283,34 +305,34 @@ nav .navlinks li a{
     text-align: left;
 }
 .contacts .write-me input{
-    padding: 5px;
+    padding: 10px 8px;
     border: none;
     border-radius: 5px;
-    background: #a2a2a2;
-    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.5);
+    background: #ddd;
+    /* box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.5); */
 
 }
 .contacts .write-me textarea{
     margin-top: 20px;
-    padding: 5px;
-    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.5);
+    padding: 10px 10px;
+    /* box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.5); */
     border-radius: 10px;
-    background: #a2a2a2;
+    background: #ddd;
     border: none;
 }
 .contacts button{
-    background-color: #a2a2a2;
+    background-color: #3754d7;
     border: 0;
     color: #fff;
     font-weight: 600;
     margin-top: 20px;
     padding: 10px;
-    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.5); */
     border-radius: 10px;
     width: 20%;
 }
 .contacts button:hover{
-    background-color: #707070;
+    background-color: #3754d7;
     transition: 0.2s;
     cursor: pointer;
 }
@@ -366,6 +388,7 @@ nav .navlinks li a{
     }
     .container{
         text-align: center;
+        padding-top: 8rem;
     }
     .hero-pic{
         position: absolute;
