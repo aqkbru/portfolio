@@ -28,15 +28,3 @@ function togglemenu() {
     menu.style.display = "block";
   }
 }
-
-//   function SendMail() {
-//     var params = {
-//       from_name: document.getElementById("nome").value,
-//       email_id: document.getElementById("email").value,
-//       message: document.getElementById("testo").value
-//     }
-//     emailjs.send("service_kyotvvj", "template_uiiep7i", params).then(function (res){
-//         alert("Messaggio inviato")
-//     })
-  
-//   }
