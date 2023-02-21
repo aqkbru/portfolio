@@ -409,6 +409,9 @@ nav .navlinks li a{
     .skills-subtitle i{
         font-size: 0.7rem !important;
     }
+    .contacts-area{
+        justify-content: center;
+    }
     .contacts-box{
         align-items: stretch;
     }
