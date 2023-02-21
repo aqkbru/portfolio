@@ -94,7 +94,7 @@ nav .navlinks li a{
     opacity: 95%;
 }
 .dropdown-content li{
-    padding: 5px 5px 0 4px;
+    padding: 5px 5px 0 1px;
     display: flex;
     align-items: baseline;
 }
