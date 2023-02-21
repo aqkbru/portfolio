@@ -14,8 +14,9 @@ function SendMail() {
           document.getElementById("email").value = "";
           document.getElementById("testo").value = "";
           alert("Messaggio inviato correttamente")
-  
+          e.preventDefault();
       })
+      
   
 
 }
@@ -27,4 +28,5 @@ function togglemenu() {
   } else {
     menu.style.display = "block";
   }
+
 }
