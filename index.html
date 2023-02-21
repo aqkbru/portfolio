@@ -42,7 +42,6 @@
                 </nav>
             </header>
             <div class="dropdown">
-                <!-- <button class="dropbtn" onclick="togglemenu()">Menù</button> -->
                 <div class="hamburger" onclick="togglemenu()">
                     <span class="bar1"></span>
                     <span class="bar2"></span>
@@ -120,6 +119,14 @@
                     <p><a href="https://github.com/aqkbru">https://github.com/aqkbru</a></p>
                 </div>
                     <div class="write-me">
+                        <!-- Ciao, ho riscontrato solo un problema con l'invio di email tramite email js. 
+                            La sezione di invio mail funziona, ma solo se non inclusa in un tag form. 
+                            Se racchiudo tutto il <div class="write-me"> in un tag form non va più. 
+                            Inoltre anche se impostato required su ogni input invia ugualmente la mail 
+                            anche con qualche campo vuoto.
+                            Vorrei sapere perche!!!
+                            Grazie,
+                            Adriano. -->
                         <input
                             type="text"
                             id="nome"
