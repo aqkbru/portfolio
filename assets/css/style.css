@@ -306,7 +306,7 @@ nav .navlinks li a{
     width: 20%;
 }
 .contacts button:hover{
-    background-color: #3754d7;
+    background-color: #007ced;
     transition: 0.2s;
     cursor: pointer;
 }
