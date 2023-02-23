@@ -315,8 +315,12 @@ nav .navlinks li a{
     margin-top: 60px;
     padding: 30px;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     background: #3754d7;
+}
+.footer .info{
+    display: flex;
+    justify-content: space-evenly;
 }
 .footer .hi,
 .footer .explore,
@@ -345,10 +349,22 @@ nav .navlinks li a{
 }
 .footer .follow a{
     font-size: 1.2rem;
-    color: #a2a2a2;
+    color: #fff;
+    background-color: #007ced;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    opacity: 0.7;
 }
 .footer .follow a:hover{
-    color: #fff;
+    opacity: 1;
+}
+.footer .copyright{
+    padding-top: 40px;
+    padding-bottom: 0;
 }
 
 /* MEDIAQUERY */
