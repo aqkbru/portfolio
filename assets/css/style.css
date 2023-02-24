@@ -454,6 +454,11 @@ nav .navlinks li a{
         top: 25px;
         width: 30% !important;
     }
+    .footer .follow a {
+        font-size: 1rem !important;
+        width: 30px;
+        height: 30px;
+    }
   }
 
   /* OLD COLOR PALETTE
