@@ -15,7 +15,6 @@ function SendMail() {
           document.getElementById("email").value = "";
           document.getElementById("testo").value = "";
           alert("Messaggio inviato correttamente");
-          e.preventdefault();
       })
 }
 
