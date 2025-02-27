@@ -18,10 +18,10 @@
     <script src="assets/js/script.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
-        <script type="text/javascript">
-            (function(){
-                emailjs.init("oI0hL79lsbaGORo46");
-            })();
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("oI0hL79lsbaGORo46");
+        })();
     </script>
 </head>
 <body>
@@ -114,61 +114,95 @@
                 <h2>Contatti</h2>
                 <div class="contacts-area">
                     <div class="contacts-box">
-                    <h3>Email</h3>
-                    <p>russoadriano92@gmail.com</p>
-                    <h3>GitHub</h3>
-                    <p><a href="https://github.com/aqkbru">https://github.com/aqkbru</a></p>
+                        <h3>Email</h3>
+                        <p>russoadriano92@gmail.com</p>
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/aqkbru">https://github.com/aqkbru</a></p>
+                    </div>
+                    <!-- Form aggiornato con EmailJS -->
+                    <form id="contact-form">
+                        <div class="write-me">
+                            <input
+                                type="text"
+                                id="nome"
+                                placeholder="Inserisci il tuo nome"
+                                required
+                            />
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Inserisci la tua email"
+                                required
+                            />
+                            <div class="textarea">
+                                <textarea id="testo" placeholder="Scrivi qui il tuo messaggio" cols="49" rows="10" required></textarea>                     
+                            </div>
+                            <button type="submit">Invia</button>
+                            <div id="status-message" style="margin-top: 15px; display: none;"></div>
+                        </div>
+                    </form>
+                </div> 
+            </div>
+        </div>
+        <div class="footer">
+            <div class="info">
+                <div class="hi">
+                    <h2>Adriano Russo</h2>
+                    <p>Ciao, Sono Adriano e questo è il mio personal website.</p>
                 </div>
-                <form onsubmit="SendMail(); reset(); return false">
-                    <div class="write-me">
-                        <input
-                            type="text"
-                            id="nome"
-                            placeholder="Inserisci il tuo nome"
-                            required
-                        />
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="Inserisci la tua email"
-                            required
-                        />
-                        <div class="textarea">
-                            <textarea id="testo" placeholder="Scrivi qui il tuo messaggio" cols="49" rows="10" required></textarea>                     
-                    </div>
-                        <button>Invia</button>
-                    </div>
-                </form>
-        </div> 
-        
+                <div class="explore">
+                    <h2>Esplora</h2>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contacts">Contatti</a></li>
+                    </ul>
                 </div>
-                
-                </div><div class="footer">
-                    <div class="info">
-                         <div class="hi">
-                        <h2>Adriano Russo</h2>
-                        <p>Ciao, Sono Adriano e questo è il mio personal website.</p>
-                    </div>
-                    <div class="explore">
-                        <h2>Esplora</h2>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#contacts">Contatti</a></li>
-                        </ul>
-                    </div>
-                    <div class="follow">
-                        <h2>Seguimi</h2>
-                        <ul>
-                            <li><a href="https://www.facebook.com/russoadriano92/" class="fa-brands fa-facebook"></a></li>
-                            <li><a href="https://www.linkedin.com/in/adriano-russo-0562671aa/" class="fa-brands fa-linkedin"></a></li>
-                            <li><a href="https://www.instagram.com/adrianorvsso/" class="fa-brands fa-instagram"></a></li>
-                        </ul>
-                    </div>
-                    </div>
-                   
-                    <p class="copyright">Copyright © 2023 | Sito Ufficiale di Adriano Russo | All Rights Reserved.</p>
+                <div class="follow">
+                    <h2>Seguimi</h2>
+                    <ul>
+                        <li><a href="https://www.facebook.com/russoadriano92/" class="fa-brands fa-facebook"></a></li>
+                        <li><a href="https://www.linkedin.com/in/adriano-russo-0562671aa/" class="fa-brands fa-linkedin"></a></li>
+                        <li><a href="https://www.instagram.com/adrianorvsso/" class="fa-brands fa-instagram"></a></li>
+                    </ul>
                 </div>
+            </div>
+            <p class="copyright">Copyright © 2023 | Sito Ufficiale di Adriano Russo | All Rights Reserved.</p>
+        </div>
+    </div>
+    <!-- Script EmailJS -->
+    <script type="text/javascript">
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Mostra un messaggio di caricamento
+            const statusMessage = document.getElementById('status-message');
+            statusMessage.textContent = "Invio in corso...";
+            statusMessage.style.display = "block";
+            
+            // Preparazione dei parametri per l'email
+            const templateParams = {
+                from_name: document.getElementById('nome').value,
+                from_email: document.getElementById('email').value,
+                message: document.getElementById('testo').value,
+                to_name: "Adriano Russo",
+                to_email: "russoadriano92@gmail.com"
+            };
+            
+            // Invio email usando EmailJS
+            // Sostituisci "service_id" e "template_id" con i tuoi ID reali di EmailJS
+            emailjs.send('service_ox58gwe', 'service_ox58gwe', templateParams)
+                .then(function() {
+                    statusMessage.textContent = "Messaggio inviato con successo!";
+                    statusMessage.style.color = "green";
+                    document.getElementById('contact-form').reset();
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    statusMessage.textContent = "Si è verificato un errore nell'invio. Riprova più tardi.";
+                    statusMessage.style.color = "red";
+                });
+        });
+    </script>
 </body>
 </html>
