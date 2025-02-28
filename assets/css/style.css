@@ -472,6 +472,7 @@ nav .navlinks li a:hover {
     width: 18px;
     height: auto;
     vertical-align: middle;
+    color: white;
 }
 .contacts-area{
     display: flex;
