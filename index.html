@@ -1,211 +1,455 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta property="og:type" content="website">
+
     <meta property="og:url" content="https://aqkbru.github.io/progetto-html-css/">
+
     <meta property="og:title" content="Adriano Russo Web Dev 🚀 ">
+
     <meta property="og:image" content="https://i.postimg.cc/1RHrn3dy/profilo2.jpg">
+
     <meta property="og:description" content="Portfolio, Skills, Contatti">
-    <meta property="og:locale" content="it_IT">
+
+    <meta property="og:locale" content="it_IT"> 
+
     <title>Adriano Russo Portfolio</title>
+
     <link rel="stylesheet" href="assets/css/style.css">
+
     <link rel="shortcut icon" href="assets/img/favicon-32x32.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> 
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Animate.css per animazioni aggiuntive -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <!-- SCRIPT -->
-    <script src="assets/js/script.js"></script>
+
+    <script defer src="assets/js/script.js"></script>
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+
     </script>
+
     <script type="text/javascript">
+
         (function(){
+
             emailjs.init("oI0hL79lsbaGORo46");
+
         })();
+
     </script>
+
 </head>
+
 <body>
+
     <div class="hero-header">
+
         <div class="wrapper">
+
             <header>
+
                 <div class="logo">
+
                     <!-- <i class="fa-solid fa-a"></i> -->
-                    <div class="logo-text">Adriano Russo Web Dev 🚀</div>
+
+                    <div class="logo-text">Adriano Russo <span>Web Dev</span> 🚀</div>
+
                 </div>
+
                 <nav>
+
                     <ul class="navlinks active">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#contacts">Contatti</a></li>
+
+                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+
+                        <li><a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+
+                        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+
+                        <li><a href="#contacts"><i class="fas fa-envelope"></i> Contatti</a></li>
+
                     </ul>
+
                 </nav>
+
             </header>
+
             <div class="dropdown">
+
                 <div class="hamburger" onclick="togglemenu()">
+
                     <span class="bar1"></span>
+
                     <span class="bar2"></span>
+
                     <span class="bar3"></span>
+
                 </div>
+
                 <div class="dropdown-content" id="menu">
-                    <li><a href="#" onclick="togglemenu()">HOME</a></li>
-                    <li><a href="#portfolio" onclick="togglemenu()">PORTFOLIO</a></li>
-                    <li><a href="#skills" onclick="togglemenu()">SKILLS</a></li>
-                    <li><a href="#contacts" onclick="togglemenu()">CONTATTI</a></li>
+
+                    <li><a href="#" onclick="togglemenu()"><i class="fas fa-home"></i> HOME</a></li>
+
+                    <li><a href="#portfolio" onclick="togglemenu()"><i class="fas fa-briefcase"></i> PORTFOLIO</a></li>
+
+                    <li><a href="#skills" onclick="togglemenu()"><i class="fas fa-code"></i> SKILLS</a></li>
+
+                    <li><a href="#contacts" onclick="togglemenu()"><i class="fas fa-envelope"></i> CONTATTI</a></li>
+
                 </div>
+
               </div>
+
             <!-- HOME -->
+
             <div class="container">
+
                 <div class="hero-pic">
+
                     <img src="assets/img/gradient.jpg" alt="immagine profilo">
+
                 </div>
+
                
+
                 <div class="hero-text">
+
                     <h5>Ciao, sono uno <span class="">Sviluppatore front-end</span></h5>
+
                     <h1>Adriano Russo</h1>
-                    <p>Sviluppo web e Data Science sono i campi dove ho maturato più interesse negli anni. Il mio obiettivo è sempre quello di creare un'applicazione che sia funzionale e bella esteticamente allo stesso tempo, amo unire l'ottimizzazione dei processi alla cura dell'aspetto grafico.
+
+                    <p>Sviluppo web e Ai sono i campi dove ho maturato più interesse negli anni. Il mio obiettivo è sempre quello di creare un'applicazione che sia funzionale e bella esteticamente allo stesso tempo, amo unire l'ottimizzazione dei processi alla cura dell'aspetto grafico.
+
                     </p>
 
+
+
                     <div class="btn-group">
+
                         <a href="https://teal-amalee-38.tiiny.site/" class="btn active">Scarica CV</a>
-                        <a href="#contacts" class="btn">Contatti</a>
+
+                        <a href="#contacts" class="btn">Contattami</a>
+
                     </div>
 
+
+
                     <div class="social">
+
                        <a href="https://www.facebook.com/russoadriano92/" class="fa-brands fa-facebook"></a>
+
                        <a href="https://www.linkedin.com/in/adriano-russo-641141306/" class="fa-brands fa-linkedin"></a>
+
                        <a href="https://www.instagram.com/adrianorvsso/" class="fa-brands fa-instagram"></a>
+
                        <a href="https://github.com/aqkbru" class="fa-brands fa-github"></a>
+
                     </div>
+
                 </div>
+
             </div>
+
             <!-- PORTFOLIO -->
+
             <div class="portfolio section" id="portfolio">
+
                 <h2>Portfolio</h2>
+
                 <p>Clicca sull'icona per vedere il progetto che desideri!</p>
+
                 <div class="portfolio-container">
-                        <a href="https://aqkbru.github.io/facebookhome/"><img src="assets/img/facebook.png" alt="immagine progetto facebook"></a>
-                        <a href="https://aqkbru.github.io/instagramhome/"><img src="assets/img/instagram.png" alt="immagine progetto instagram"></a>
-                        <a href="https://aqkbru.github.io/counter/"><img src="assets/img/counter.png" alt="immagine progetto portfolio"></a>
-                </div>
-            </div>
-            <!-- SKILLS -->
-            <div class="skills section" id="skills">
-                <h2>Skills</h2>
-                <div class="skills-container">
-                    <div class="skills-sx">
-                        <h3 class="skills-subtitle">Front-end&nbsp <i class="fa-solid fa-cube"></i></h3>
-                            <span class="skills-name">Javascript</span>
-                            <span class="skills-name">HTML/CSS</span>
-                            <span class="skills-name">Bootstrap</span>
-                
-                
-                    </div>
-                    <div class="skills-dx">
-                        <h3 class="skills-subtitle">Data Science&nbsp<i class="fa-solid fa-pen-ruler"></i></h3>
-                            <span class="skills-name">Python</span>
-                            <span class="skills-name">Anaconda</span>
-                            <span class="skills-name">Data Framework</span>
-                    </div>
-                </div>
-            </div>
-            <!-- CONTACTS -->
-            <div class="contacts section" id="contacts">
-                <h2>Contatti</h2>
-                <div class="contacts-area">
-                    <div class="contacts-box">
-                        <h3>Email</h3>
-                        <p>russoadriano92@gmail.com</p>
-                        <h3>GitHub</h3>
-                        <p><a href="https://github.com/aqkbru">https://github.com/aqkbru</a></p>
-                    </div>
-                    <!-- Form aggiornato con EmailJS -->
-                    <form id="contact-form">
-                        <div class="write-me">
-                            <input
-                                type="text"
-                                id="nome"
-                                placeholder="Inserisci il tuo nome"
-                                required
-                            />
-                            <input
-                                type="email"
-                                id="email"
-                                placeholder="Inserisci la tua email"
-                                required
-                            />
-                            <div class="textarea">
-                                <textarea id="testo" placeholder="Scrivi qui il tuo messaggio" cols="49" rows="10" required></textarea>                     
-                            </div>
-                            <button type="submit">Invia</button>
-                            <div id="status-message" style="margin-top: 15px; display: none;"></div>
+
+                    <a href="https://aqkbru.github.io/facebookhome/" class="project-card">
+
+                        <div class="project-image facebook-image"></div>
+
+                        <div class="overlay">
+
+                            <div class="project-title">Facebook Clone</div>
+
                         </div>
+
+                    </a>
+
+                    <a href="https://aqkbru.github.io/instagramhome" class="project-card">
+
+                        <div class="project-image instagram-image"></div>
+
+                        <div class="overlay">
+
+                            <div class="project-title">Instagram Clone</div>
+
+                        </div>
+
+                    </a>
+
+                    <a href="https://aqkbru.github.io/counter/" class="project-card">
+
+                        <div class="project-image counter-image"></div>
+
+                        <div class="overlay">
+
+                            <div class="project-title">Counter App</div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- SKILLS -->
+
+            <div class="skills section" id="skills">
+
+                <h2>Skills</h2>
+
+                <div class="skills-container">
+
+                    <div class="skills-sx">
+
+                        <h3 class="skills-subtitle">Front-end&nbsp <i class="fa-solid fa-cube"></i></h3>
+
+                        <span class="skills-name"><i class="fab fa-js"></i> Javascript</span>
+
+                        <span class="skills-name"><i class="fab fa-html5"></i> HTML/CSS</span>
+
+                        <span class="skills-name"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCBhdXRvIGF1dG8iIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTQuOTkzIDBIOC41MTZMNi4wODYgMi40ODdMNC45OTMgMFpNNC4xNDQgMi40ODdMMC42OTkgNi4wMDFMNy4wMiAxMi41MDFMNi4wODYgMTMuNDQ5TDcuMDIgMTQuMzk3TDYuMDg2IDE1LjM0Nkw3LjAyIDE2LjI5NEw2LjA4NiAxNy4yNDNMNy4wMiAxOC4xOTFMNi4wODYgMTkuMTRMOS40MTYgMjIuNUgxOS43NTZMMTQuNjYzIDE3LjI0M0g2LjA4NkwxMC43MTMgMTIuNTAxTDQuMTQ0IDUuODM5VjIuNDg3Wk0wIDcuMTEzVjE5LjE0TDIuMzQ0IDIxLjU2NkwwIDIxLjU2NlYyMi41SDVMMi4zNDQgMTkuNzQ3VjcuMTEzSDBaTTE5Ljc1NiA3LjExM0wyMy4yMDEgMTAuNTY3TDE5Ljc1NiAxNC4wNDlIMTIuMzEzTDE1Ljc1OCAxMC41NjdMMTEuODkgNi41OTZIMTkuNzU2VjcuMTEzWiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==" class="flutter-icon" alt="Flutter" /> Flutter</span>
+
+                    </div>
+
+                    <div class="skills-dx">
+
+                        <h3 class="skills-subtitle">Back-end&nbsp<i class="fa-solid fa-server"></i></h3>
+
+                        <span class="skills-name"><i class="fab fa-python"></i> Python</span>
+
+                        <span class="skills-name"><i class="fas fa-robot"></i> Claude Code</span>
+
+                        <span class="skills-name"><i class="fab fa-node-js"></i> Node.js</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CONTACTS -->
+
+            <div class="contacts section" id="contacts">
+
+                <h2>Contatti</h2>
+
+                <div class="contacts-area">
+
+                    <div class="contacts-box">
+
+                        <h3><i class="fas fa-envelope"></i> Email</h3>
+
+                        <p>russoadriano92@gmail.com</p>
+
+                        <h3><i class="fab fa-github"></i> GitHub</h3>
+
+                        <p><a href="https://github.com/aqkbru">https://github.com/aqkbru</a></p>
+
+                        <h3><i class="fas fa-map-marker-alt"></i> Località</h3>
+
+                        <p>Italia</p>
+
+                    </div>
+
+                    <form onsubmit="SendMail(); return false;">
+
+                        <div class="write-me">
+
+                            <input
+
+                                type="text"
+
+                                id="nome"
+
+                                placeholder="Inserisci il tuo nome"
+
+                                required
+
+                            />
+
+                            <input
+
+                                type="email"
+
+                                id="email"
+
+                                placeholder="Inserisci la tua email"
+
+                                required
+
+                            />
+
+                            <div class="textarea">
+
+                                <textarea id="testo" placeholder="Scrivi qui il tuo messaggio" cols="49" rows="10" required></textarea>                     
+
+                            </div>
+
+                            <button type="submit">Invia messaggio <i class="fas fa-paper-plane"></i></button>
+
+                        </div>
+
                     </form>
+
                 </div> 
+
             </div>
+
         </div>
+
+        
+
         <div class="footer">
+
             <div class="info">
+
                 <div class="hi">
+
                     <h2>Adriano Russo</h2>
+
                     <p>Ciao, Sono Adriano e questo è il mio personal website.</p>
+
                 </div>
+
                 <div class="explore">
+
                     <h2>Esplora</h2>
+
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#contacts">Contatti</a></li>
+
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+
+                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+
+                        <li><a href="#skills"><i class="fas fa-chevron-right"></i> Skills</a></li>
+
+                        <li><a href="#contacts"><i class="fas fa-chevron-right"></i> Contatti</a></li>
+
                     </ul>
+
                 </div>
+
                 <div class="follow">
+
                     <h2>Seguimi</h2>
+
                     <ul>
+
                         <li><a href="https://www.facebook.com/russoadriano92/" class="fa-brands fa-facebook"></a></li>
+
                         <li><a href="https://www.linkedin.com/in/adriano-russo-0562671aa/" class="fa-brands fa-linkedin"></a></li>
+
                         <li><a href="https://www.instagram.com/adrianorvsso/" class="fa-brands fa-instagram"></a></li>
+
+                        <li><a href="https://github.com/aqkbru" class="fa-brands fa-github"></a></li>
+
                     </ul>
+
                 </div>
+
             </div>
-            <p class="copyright">Copyright © 2023 | Sito Ufficiale di Adriano Russo | All Rights Reserved.</p>
+
+           
+
+            <p class="copyright">Copyright © 2025 | Sito Ufficiale di Adriano Russo | All Rights Reserved.</p>
+
         </div>
+
     </div>
-    <!-- Script EmailJS -->
+
     <script type="text/javascript">
+
         document.getElementById('contact-form').addEventListener('submit', function(event) {
+
             event.preventDefault();
+
             
+
             // Mostra un messaggio di caricamento
+
             const statusMessage = document.getElementById('status-message');
+
             statusMessage.textContent = "Invio in corso...";
+
             statusMessage.style.display = "block";
+
             
+
             // Preparazione dei parametri per l'email
+
             const templateParams = {
+
                 from_name: document.getElementById('nome').value,
+
                 from_email: document.getElementById('email').value,
+
                 message: document.getElementById('testo').value,
+
                 to_name: "Adriano Russo",
+
                 to_email: "russoadriano92@gmail.com"
+
             };
+
             
+
             // Invio email usando EmailJS
+
             // Sostituisci "service_id" e "template_id" con i tuoi ID reali di EmailJS
+
             emailjs.send('service_2uf3p1b', 'template_d0nhl06', templateParams)
+
                 .then(function() {
+
                     statusMessage.textContent = "Messaggio inviato con successo!";
+
                     statusMessage.style.color = "green";
+
                     document.getElementById('contact-form').reset();
+
                 }, function(error) {
+
                     console.log('FAILED...', error);
+
                     statusMessage.textContent = "Si è verificato un errore nell'invio. Riprova più tardi.";
+
                     statusMessage.style.color = "red";
+
                 });
+
         });
+
     </script>
+
 </body>
+
 </html>
