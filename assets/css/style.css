@@ -9,6 +9,7 @@
 }
 body{
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 .hero-header{
     width: 100%;
