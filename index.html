@@ -22,6 +22,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- SCRIPT -->
     <script defer src="assets/js/script.js"></script>
+    <!-- Includi EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Inizializza EmailJS con il tuo User ID
+        (function() {
+            emailjs.init("oI0hL79lsbaGORo46);
+        })();
+
+        // Funzione per inviare l'email
+        function SendMail() {
+            // Mostra un messaggio di caricamento
+            const statusMessage = document.getElementById('status-message');
+            statusMessage.textContent = "Invio in corso...";
+            statusMessage.style.display = "block";
+
+            // Prepara i parametri per l'email
+            const templateParams = {
+                from_name: document.getElementById('nome').value,
+                from_email: document.getElementById('email').value,
+                message: document.getElementById('testo').value,
+                to_name: "Adriano Russo", // Nome del destinatario
+                to_email: "russoadriano92@gmail.com" // Email del destinatario
+            };
+
+            // Invia l'email utilizzando EmailJS
+            emailjs.send('service_o3vc9xo', 'template_3e217h7', templateParams) // Sostituisci con il tuo Service ID e Template ID
+                .then(function(response) {
+                    console.log("SUCCESS", response);
+                    statusMessage.textContent = "Messaggio inviato con successo!";
+                    statusMessage.style.color = "green";
+
+                    // Resetta il form
+                    document.getElementById('nome').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('testo').value = '';
+                }, function(error) {
+                    console.log("FAILED", error);
+                    statusMessage.textContent = "Si è verificato un errore nell'invio. Riprova più tardi.";
+                    statusMessage.style.color = "red";
+                });
+        }
+    </script>
 </head>
 
 <body>
@@ -134,7 +176,7 @@
                         <h3><i class="fas fa-map-marker-alt"></i> Località</h3>
                         <p>Roma</p>
                     </div>
-                    <form id="contact-form">
+                    <form id="contact-form" onsubmit="SendMail(); return false;">
                         <div class="write-me">
                             <input
                                 type="text"
@@ -151,7 +193,7 @@
                             <div class="textarea">
                                 <textarea id="testo" placeholder="Scrivi qui il tuo messaggio" cols="49" rows="10" required></textarea>                     
                             </div>
-                            <div style="display: none; margin: 10px 0; padding: 10px; border-radius: 4px; font-weight: bold;"></div>
+                            <div id="status-message" style="display: none; margin: 10px 0; padding: 10px; border-radius: 4px; font-weight: bold;"></div>
                             <button type="submit">Invia messaggio <i class="fas fa-paper-plane"></i></button>
                         </div>
                     </form>
