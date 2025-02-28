@@ -22,12 +22,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- SCRIPT -->
     <script defer src="assets/js/script.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("oI0hL79lsbaGORo46");
-        })();
-    </script>
 </head>
 
 <body>
@@ -47,7 +41,8 @@
                     </ul>
                 </nav>
             </header>
-            <div class="dropdown">
+            <!-- HAMBURGER MENU -->
+            <!--<div class="dropdown">
                 <div class="hamburger" onclick="togglemenu()">
                     <span class="bar1"></span>
                     <span class="bar2"></span>
@@ -58,7 +53,7 @@
                     <li><a href="#portfolio" onclick="togglemenu()"><i class="fas fa-briefcase"></i> PORTFOLIO</a></li>
                     <li><a href="#skills" onclick="togglemenu()"><i class="fas fa-code"></i> SKILLS</a></li>
                     <li><a href="#contacts" onclick="togglemenu()"><i class="fas fa-envelope"></i> CONTATTI</a></li>
-                </div>
+                </div>-->
               </div>
             <!-- HOME -->
             <div class="container">
@@ -140,7 +135,7 @@
                         <h3><i class="fas fa-map-marker-alt"></i> Località</h3>
                         <p>Roma</p>
                     </div>
-                    <form id="contact-form" onsubmit="SendMail(); return false;">
+                    <form id="contact-form">
                         <div class="write-me">
                             <input
                                 type="text"
@@ -157,7 +152,7 @@
                             <div class="textarea">
                                 <textarea id="testo" placeholder="Scrivi qui il tuo messaggio" cols="49" rows="10" required></textarea>                     
                             </div>
-                            <div id="status-message" style="display: none; margin: 10px 0; padding: 10px; border-radius: 4px; font-weight: bold;"></div>
+                            <div style="display: none; margin: 10px 0; padding: 10px; border-radius: 4px; font-weight: bold;"></div>
                             <button type="submit">Invia messaggio <i class="fas fa-paper-plane"></i></button>
                         </div>
                     </form>
@@ -194,38 +189,5 @@
             <p class="copyright">Copyright © 2025 | Sito Ufficiale di Adriano Russo | All Rights Reserved.</p>
         </div>
     </div>
-    <script>
-        // Funzione per inviare email
-        function SendMail() {
-            // Mostra un messaggio di caricamento
-            const statusMessage = document.getElementById('status-message');
-            statusMessage.textContent = "Invio in corso...";
-            statusMessage.style.display = "block";
-            
-            // Preparazione dei parametri per l'email
-            const templateParams = {
-                from_name: document.getElementById('nome').value,
-                from_email: document.getElementById('email').value,
-                message: document.getElementById('testo').value,
-                to_name: "Adriano Russo",
-                to_email: "russoadriano92@gmail.com"
-            };
-            
-            // Invio email usando EmailJS
-            emailjs.send('service_o3vc9xo', 'template_3e217h7', templateParams)
-                .then(function() {
-                    statusMessage.textContent = "Messaggio inviato con successo!";
-                    statusMessage.style.color = "green";
-                    // Reset del form
-                    document.getElementById('nome').value = '';
-                    document.getElementById('email').value = '';
-                    document.getElementById('testo').value = '';
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    statusMessage.textContent = "Si è verificato un errore nell'invio. Riprova più tardi.";
-                    statusMessage.style.color = "red";
-                });
-        }
-    </script>
 </body>
 </html>
