@@ -467,13 +467,13 @@ nav .navlinks li a:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(55, 84, 215, 0.3);
 }
-/*.skills-name i, .skills-name img.flutter-icon {
+.skills-name i{
     margin-right: 8px;
     width: 18px;
     height: auto;
     vertical-align: middle;
-    color: white;
-}*/
+}
+
 .contacts-area{
     display: flex;
     justify-content: space-evenly;
