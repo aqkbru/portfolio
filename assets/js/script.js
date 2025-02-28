@@ -1,98 +1,71 @@
+// EmailJS function for sending emails
 function SendMail() {
+    // Get the status message element
+    const statusMessage = document.getElementById("status-message");
+    
+    // Get form data
     var params = {
-      from_name: document.getElementById("nome").value,
-      email_id: document.getElementById("email").value,
-      message: document.getElementById("testo").value
+        from_name: document.getElementById("nome").value,
+        email_id: document.getElementById("email").value,
+        message: document.getElementById("testo").value
     };
 
-    // Mostra feedback visivo durante l'invio
-    const button = document.querySelector('.contacts button');
-    const originalText = button.innerHTML;
-    const originalBg = window.getComputedStyle(button).background;
-    button.innerHTML = "Invio in corso... <i class='fas fa-spinner fa-spin'></i>";
-    button.disabled = true;
-    
-    const serviceID = "service_kyotvvj";
-    const templateID = "template_uiiep7i";
-  
+    // Show loading message
+    statusMessage.style.display = "block";
+    statusMessage.style.backgroundColor = "#f8f9fa";
+    statusMessage.style.color = "#212529";
+    statusMessage.innerHTML = "Invio in corso... <i class='fas fa-spinner fa-spin'></i>";
+
+    // EmailJS service and template IDs
+    const serviceID = "service_o3vc9xo";
+    const templateID = "template_3e217h7";
+
+    // Send email using EmailJS
     emailjs.send(serviceID, templateID, params)
-      .then(
-        res => {
-          document.getElementById("nome").value = "";
-          document.getElementById("email").value = "";
-          document.getElementById("testo").value = "";
-          
-          // Feedback positivo
-          button.innerHTML = "Inviato! <i class='fas fa-check'></i>";
-          button.style.background = "linear-gradient(135deg, #28a745, #218838)";
-          button.style.borderColor = "rgba(255, 255, 255, 0.4)";
-          
-          // Ripristina il bottone dopo 2 secondi
-          setTimeout(() => {
-            button.innerHTML = originalText;
-            button.disabled = false;
-            button.style.background = originalBg;
-            button.style.borderColor = "rgba(255, 255, 255, 0.2)";
-          }, 2000);
-      })
-      .catch(err => {
-          console.error("Email error:", err);
-          
-          // Feedback negativo in caso di errore
-          button.innerHTML = "Errore <i class='fas fa-times'></i>";
-          button.style.background = "linear-gradient(135deg, #dc3545, #c82333)";
-          
-          // Ripristina il bottone dopo 2 secondi
-          setTimeout(() => {
-            button.innerHTML = originalText;
-            button.disabled = false;
-            button.style.background = originalBg;
-            button.style.borderColor = "rgba(255, 255, 255, 0.2)";
-          }, 2000);
-      });
+        .then(function(response) {
+            // Success
+            console.log("SUCCESS!", response.status, response.text);
+            // Clear form fields
+            document.getElementById("nome").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("testo").value = "";
+            
+            // Show success message
+            statusMessage.style.backgroundColor = "#d4edda";
+            statusMessage.style.color = "#155724";
+            statusMessage.innerHTML = "Messaggio inviato con successo! <i class='fas fa-check-circle'></i>";
+            
+            // Hide message after 5 seconds
+            setTimeout(function() {
+                statusMessage.style.display = "none";
+            }, 5000);
+        })
+        .catch(function(error) {
+            // Error
+            console.log("FAILED...", error);
+            
+            // Show error message
+            statusMessage.style.backgroundColor = "#f8d7da";
+            statusMessage.style.color = "#721c24";
+            statusMessage.innerHTML = "Errore nell'invio del messaggio. Riprova più tardi. <i class='fas fa-exclamation-circle'></i>";
+        });
+    
+    // Prevent form submission
+    return false;
 }
 
+// Hamburger menu toggle function
 function togglemenu() {
-  const menu = document.getElementById("menu");
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "block";
-  }
+    const menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
 }
 
-// Animazione smooth per le sezioni
-document.addEventListener('DOMContentLoaded', function() {
-  // Aggiungi animazione di fade-in agli elementi principali
-  const sections = document.querySelectorAll('.section');
-  
-  // Observer per l'animazione delle sezioni
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-  
-  // Prepara le sezioni per l'animazione
-  sections.forEach(section => {
-    section.style.opacity = 0;
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    sectionObserver.observe(section);
-  });
-  
-  // Animazione navbar durante lo scroll
-  window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 100) {
-      header.style.padding = '10px 0';
-      header.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.1)';
-    } else {
-      header.style.padding = '20px 0';
-      header.style.boxShadow = '0 0 15px rgba(0, 0, 0, 0.2)';
-    }
-  });
+// Initialize EmailJS when the document is loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Initialize EmailJS with your public key
+    emailjs.init("oI0hL79lsbaGORo46"); // Replace with your actual EmailJS public key
 });
