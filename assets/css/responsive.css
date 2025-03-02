@@ -1,0 +1,616 @@
+/* Responsive Styles */
+
+/* Base responsive styles */
+@media screen and (min-width: 320px) {
+    /* Ensure the wrapper is fully responsive */
+    .wrapper {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
+    /* Make images responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Adjust header for all sizes */
+    header {
+        padding: 15px 4%;
+    }
+}
+
+/* Small devices (landscape phones) */
+@media screen and (max-width: 576px) {
+    /* Header adjustments */
+    .logo .logo-text {
+        font-size: 0.95rem;
+    }
+    
+    /* Hero section adjustments */
+    .container {
+        padding-top: 5.5rem;
+    }
+    
+    .container .hero-pic {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.8rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .hero-text h5 {
+        font-size: 14px;
+    }
+    
+    .hero-text h5 span {
+        font-size: 16px;
+    }
+    
+    .hero-text p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    /* Button adjustments */
+    .btn-group {
+        margin: 25px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .btn-group .btn {
+        margin-right: 0;
+        margin-bottom: 12px;
+        width: 90%;
+        text-align: center;
+        padding: 10px 20px;
+    }
+    
+    /* Social links */
+    .hero-text .social {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    /* Section adjustments */
+    .section {
+        margin-top: 3rem;
+        padding: 25px 15px;
+    }
+    
+    .portfolio h2, .skills h2, .contacts h2 {
+        font-size: 1.8rem;
+    }
+    
+    .portfolio p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Portfolio items */
+    .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .portfolio-container a.project-card {
+        width: 100%;
+        max-width: 300px;
+        height: 160px;
+    }
+    
+    /* Skills adjustments */
+    .skills-container h3 {
+        font-size: 1.3rem;
+    }
+    
+    .skills-name {
+        padding: 10px 15px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    /* Form adjustments */
+    .contacts .write-me input,
+    .contacts .write-me textarea {
+        padding: 12px;
+    }
+    
+    .contacts button {
+        padding: 10px 20px;
+        width: 100%;
+    }
+    
+    /* Footer adjustments */
+    .footer {
+        margin-top: 40px;
+        padding: 30px 15px 20px;
+    }
+    
+    .footer h2 {
+        font-size: 1.2rem;
+    }
+    
+    .footer p, .footer .explore a {
+        font-size: 14px;
+    }
+    
+    .footer .copyright {
+        font-size: 12px;
+        padding-top: 25px;
+        text-align: center;
+        line-height: 1.6;
+    }
+}
+
+/* Medium devices (tablets) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    /* Header adjustments */
+    header {
+        padding: 15px 5%;
+    }
+    
+    .logo .logo-text {
+        font-size: 1.1rem;
+    }
+    
+    /* Hide desktop nav and show mobile menu */
+    nav .navlinks {
+        display: none;
+    }
+    
+    .dropdown {
+        display: block;
+        position: relative;
+        z-index: 101;
+        margin-right: 15px;
+    }
+    
+    /* Hero section */
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 7rem;
+    }
+    
+    .container .hero-pic {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .hero-text {
+        max-width: 90%;
+        margin: 2rem auto 0;
+        align-items: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-text p {
+        text-align: center;
+        margin: 10px auto;
+    }
+    
+    /* Button group */
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+        width: 100%;
+    }
+    
+    .btn-group .btn {
+        margin-right: 0;
+        margin-bottom: 12px;
+        width: 80%;
+        text-align: center;
+    }
+    
+    /* Social links */
+    .hero-text .social {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+    
+    /* Portfolio items */
+    .portfolio-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .portfolio-container a.project-card {
+        width: 100%;
+        max-width: 320px;
+        height: 180px;
+        margin-bottom: 0;
+    }
+    
+    /* Skills section */
+    .skills .skills-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .skills-sx, .skills-dx {
+        width: 100%;
+        max-width: 400px;
+        align-items: center;
+    }
+    
+    /* Contact section */
+    .contacts-area {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .contacts-box {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .contacts-box h3 {
+        text-align: center;
+    }
+    
+    .contacts-box h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .contacts form {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    /* Footer */
+    .footer .info {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .footer .hi, .footer .explore, .footer .follow {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* Large devices (desktops) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    /* Header adjustments */
+    header {
+        padding: 18px 5%;
+        justify-content: space-between;
+    }
+    
+    /* Hide desktop nav and show mobile menu */
+    nav .navlinks {
+        display: none;
+    }
+    
+    .dropdown {
+        display: block;
+        position: relative;
+        z-index: 101;
+        margin-right: 20px;
+    }
+    
+    /* Hero section */
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 8rem;
+    }
+    
+    .container .hero-pic {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .hero-text {
+        max-width: 85%;
+        margin: 2rem auto 0;
+        align-items: center;
+    }
+    
+    .hero-text p {
+        text-align: center;
+        margin: 15px auto;
+        max-width: 600px;
+    }
+    
+    /* Button group */
+    .btn-group {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    /* Social links */
+    .hero-text .social {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    /* Portfolio items */
+    .portfolio-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    
+    .portfolio-container a.project-card {
+        width: 45%;
+        max-width: 300px;
+    }
+    
+    /* Skills section */
+    .skills .skills-container {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    
+    .skills-sx, .skills-dx {
+        width: 45%;
+        min-width: 300px;
+        align-items: center;
+    }
+    
+    /* Contact section */
+    .contacts-area {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 30px;
+    }
+    
+    .contacts-box {
+        width: 45%;
+        min-width: 300px;
+    }
+    
+    .contacts form {
+        width: 45%;
+        min-width: 300px;
+    }
+    
+    /* Footer */
+    .footer .info {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 25px;
+    }
+    
+    .footer .hi, .footer .explore, .footer .follow {
+        width: 30%;
+        min-width: 250px;
+    }
+}
+
+/* Extra large devices (large desktops) */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    /* Portfolio items */
+    .portfolio-container a.project-card {
+        width: 28%;
+    }
+    
+    /* Make sure dropdown is hidden for desktop */
+    .dropdown {
+        display: none;
+    }
+}
+
+/* Fix for very large screens */
+@media screen and (min-width: 1201px) {
+    /* Make sure dropdown is hidden for desktop */
+    .dropdown {
+        display: none;
+    }
+    
+    /* Ensure content doesn't get too wide */
+    .section {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Touch device improvements */
+@media (hover: none) {
+    /* Improve touch targets */
+    nav .navlinks li a,
+    .dropdown-content a,
+    .btn-group .btn,
+    .contacts button {
+        padding: 12px 24px;
+    }
+    
+    .hero-text .social a {
+        padding: 10px;
+    }
+    
+    /* Show portfolio overlay by default for touch devices */
+    .portfolio .overlay {
+        opacity: 0.8;
+    }
+}
+
+/* Fixed positioning for header */
+header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Safari and iOS specific fixes */
+@supports (-webkit-touch-callout: none) {
+    /* Fix for iOS input elements */
+    input, textarea {
+        -webkit-appearance: none;
+        border-radius: 8px;
+    }
+}
+
+/* Print styles for CV */
+@media print {
+    .hero-header {
+        background: none;
+    }
+    
+    header, .dropdown, .btn-group, .social, .portfolio, .skills, .contacts, .footer {
+        display: none;
+    }
+    
+    .container {
+        display: block;
+        padding-top: 0;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+    }
+}
+/* Accessibility improvements */
+.active-link {
+    background-color: rgba(255, 255, 255, 0.2) \!important;
+    position: relative;
+}
+
+.active-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+}
+
+/* Focus states for better accessibility */
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 2px solid rgba(55, 84, 215, 0.5);
+    outline-offset: 2px;
+}
+
+/* Improve touch targets on mobile */
+@media (pointer: coarse) {
+    .btn-group .btn,
+    .contacts button,
+    nav .navlinks li a,
+    .dropdown-content a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-text .social a,
+    .footer .follow a {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+/* Image optimizations for responsive behavior */
+.project-image {
+    transform: scale(0.95);
+    transition: transform 0.3s ease-out;
+}
+
+a.project-card:hover .project-image {
+    transform: scale(1);
+}
+
+/* Improve spacing in smaller screens */
+@media screen and (max-width: 480px) {
+    .section {
+        padding: 25px 15px;
+    }
+    
+    .contacts .write-me input,
+    .contacts .write-me textarea {
+        font-size: 16px; /* Prevent zoom on iPhone */
+    }
+}
+
+/* Print styles for CV */
+@media print {
+    .hero-header {
+        background: none;
+    }
+    
+    header, .dropdown, .btn-group, .social, .portfolio, .skills, .contacts, .footer {
+        display: none;
+    }
+    
+    .container {
+        display: block;
+        padding-top: 0;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+    }
+}
+
+/* Fix for viewport height issues on mobile browsers */
+:root {
+  --vh: 1vh;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-header {
+    height: 100vh; /* Fallback */
+    height: calc(var(--vh, 1vh) * 100);
+  }
+  
+  .section {
+    min-height: 50vh; /* Fallback */
+    min-height: calc(var(--vh, 1vh) * 50);
+  }
+}
+
+/* Improve first-load performance */
+@media screen and (max-width: 576px) {
+  .container .hero-pic img {
+    content-visibility: auto;
+  }
+  
+  .section:not(:first-of-type) {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 500px;
+  }
+}
